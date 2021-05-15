@@ -1,11 +1,11 @@
 import express from "express";
-import {getUsers,postUser,deleteById,updateUserById} from "../controller/user.js";
+import {getUsers,postUser,deleteUserById,updateUserById} from "../controller/user.js";
 
 const router = express.Router();
 
 router.get("/",getUsers);
 router.post("/",postUser);
-router.delete("/:id",deleteById);
+router.delete("/:id",deleteUserById);
 router.patch("/:id",updateUserById);
 
 export default router;
